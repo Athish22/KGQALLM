@@ -1,0 +1,12 @@
+[
+  {
+    "name": "machines_by_name",
+    "question": "List all the processing and assembling machines by name.",
+    "sparql": "PREFIX smo: <http://www.semanticweb.org/manufacturingproductionline#>\nPREFIX d: <http://www.semanticweb.org/manufacturingproductionline/data/>\nPREFIX tm: <http://www.w3.org/2006/time#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX sosa: <http://www.w3.org/ns/sosa#>\nSELECT *\nWHERE\n{\n{?Machine a smo:ProcessingMachine.}\n  UNION\n {?Machine a smo:AssemblingMachine.}\n  ?Machine smo:hasName ?Name.\nFILTER(?Name != \"\")\n}"
+  },
+  {
+    "name": "tool_of_machine_2",
+    "question": "What tools does Machine 2 have?",
+    "sparql": "PREFIX smo: <http://www.semanticweb.org/manufacturingproductionline#>\nPREFIX d: <http://www.semanticweb.org/manufacturingproductionline/data/>\nPREFIX tm: <http://www.w3.org/2006/time#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX sosa: <http://www.w3.org/ns/sosa#>\nSELECT ?Machine ?tool\nWHERE\n{ ?machine a smo:ProcessingMachine;\nsmo:hasName ?Machine.\n\n?machine smo:hasTool ?tool.\nFILTER (?machine = d:Machine_2 && ?Machine != \"\").\n}"
+  }
+]
