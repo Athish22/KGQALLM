@@ -6,7 +6,7 @@ pipeline grounds entities and properties, constructs a SPARQL query, runs
 it, and verbalizes the result.
 
 A curated adapter is included for an Industry 4.0 production-line
-ontology, with 5 built-in query templates covering its common question
+ontology(https://www.semantic-web-journal.net/content/benchmark-dataset-knowledge-graph-generation-industry-40-production-lines), with 5 built-in query templates covering its common question
 shapes. Any other knowledge graph is grounded with a generic heuristic and
 answered entirely through an LLM fallback (Hugging Face Inference API).
 
@@ -76,3 +76,15 @@ print(answer.sparql_query)
 The two reference `.owl` files used for development are not checked into
 this repo (see `.gitignore`) since they're large. Point `KGQAPipeline` at
 your own local RDF/OWL file, or the reference KG files if you have them.
+
+## Citations
+@article{yahya2024benchmark,
+  title={A benchmark dataset with Knowledge Graph generation for Industry 4.0 production lines},
+  author={Yahya, Muhammad and Ali, Aabid and Mehmood, Qaiser and Yang, Lan and Breslin, John G and Ali, Muhammad Intizar},
+  journal={Semantic Web},
+  volume={15},
+  number={2},
+  pages={461--479},
+  year={2024},
+  publisher={SAGE Publications Sage UK: London, England}
+}
