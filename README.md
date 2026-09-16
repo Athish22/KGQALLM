@@ -65,7 +65,7 @@ print(answer.sparql_query)
 
 
 ## Citations
-@article{yahya2024benchmark,
+[1] @article{yahya2024benchmark,
   title={A benchmark dataset with Knowledge Graph generation for Industry 4.0 production lines},
   author={Yahya, Muhammad and Ali, Aabid and Mehmood, Qaiser and Yang, Lan and Breslin, John G and Ali, Muhammad Intizar},
   journal={Semantic Web},
