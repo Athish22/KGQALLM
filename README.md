@@ -5,6 +5,8 @@ a Turtle/RDF-XML/N3/N-Triples file and ask questions in plain English; the
 pipeline grounds entities and properties, constructs a SPARQL query, runs
 it, and verbalizes the result.
 
+![Image](.kgqa-architecture.png)
+
 A curated adapter is included for an Industry 4.0 production-line
 ontology(https://www.semantic-web-journal.net/content/benchmark-dataset-knowledge-graph-generation-industry-40-production-lines), with 5 built-in query templates covering its common question
 shapes. Any other knowledge graph is grounded with a generic heuristic and
