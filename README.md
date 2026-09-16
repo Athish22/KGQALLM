@@ -63,21 +63,6 @@ print(answer.sparql_query)
   not query text) and a small sample question set
 - `app.py` -- Gradio UI wiring the above together
 
-## Known limitations
-
-- Only 5 hard-coded templates answer without an LLM token; everything
-  else needs the Hugging Face fallback.
-- Multi-hop question decomposition is not implemented.
-- Tier B/C retrieval (embedding-based grounding for larger or higher
-  cardinality knowledge graphs) is stubbed, not implemented.
-- Any KG besides the bundled reference ontology gets generic (lower
-  precision) entity grounding.
-
-## Data files
-
-The two reference `.owl` files used for development are not checked into
-this repo (see `.gitignore`) since they're large. Point `KGQAPipeline` at
-your own local RDF/OWL file, or the reference KG files if you have them.
 
 ## Citations
 @article{yahya2024benchmark,
